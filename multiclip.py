@@ -56,7 +56,8 @@ if(len(sys.argv) == 2):
         if key not in data:
             print("Key does not exist")
         else:
-            data.pop(key)
+            data = data.pop(key)
+            save_data(SAVED_DATA, data)
             print(f"{key} deleted successfully")
 
     else:
